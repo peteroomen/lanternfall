@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101923">
+  <meta name="description" content="Carry a little light into a dangerous place. Lanternfall is a four-floor, turn-based fantasy roguelike with treasure, trickery, and a stolen dawn.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Lanternfall — A little light goes a long way</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./assets/icon-192.png">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preload" href="./assets/sprites.png" as="image">
+</head>
+<body>
+  <main id="app">
+    <section id="title-screen" class="title-screen" aria-label="Lanternfall title screen">
+      <div class="title-art"></div><div class="title-vignette"></div>
+      <div class="title-copy"><span class="eyebrow">A POCKET ADVENTURE</span><h1>LANTERN<span>FALL</span></h1><p>A little light goes a long way.</p></div>
+      <div class="title-menu"><div class="title-story">Four floors beneath the old kingdom.<br>One stolen dawn. One very hungry chest.</div><button id="continue" class="button gold" hidden>Continue your journey <span>↗</span></button><button id="new-game" class="button gold">Enter the ruins <span>↗</span></button><div class="title-links"><button id="title-guide">How to play</button><span>✦</span><button id="title-audio">Sound off</button></div><p class="title-foot">TURN BASED · EVERY STEP IS A CHOICE</p></div>
+    </section>
+    <section id="game-screen" class="game-screen" hidden aria-label="Lanternfall game">
+      <header class="game-header"><button id="pause" class="brand" aria-label="Open pause menu"><span class="brand-mark">✦</span> LANTERNFALL</button><span id="header-floor" class="header-floor">FLOOR I / IV</span><button id="sound" class="icon-button" aria-label="Enable sound"></button><button id="help" class="icon-button" aria-label="How to play">?</button></header>
+      <div class="hero-hud"><div class="hero-portrait"><span class="sprite s0"></span></div><div class="health-block"><div class="health-top"><strong>The Wayfarer</strong><span id="health-text">38 / 38</span></div><div class="health-track"><div id="health-fill"></div></div><div class="xp-track"><div id="xp-fill"></div></div><div class="hud-bottom"><span id="level-text">LEVEL 1</span><span id="xp-text">0 / 14 XP</span></div></div><div class="combat-stats"><span id="attack-stat"></span><span id="defence-stat"></span><span id="gold-stat"></span></div></div>
+      <div class="play-layout"><div class="play-column"><div class="board-wrap"><canvas id="dungeon" tabindex="0" aria-label="Dungeon. Tap a visible enemy to attack, or explored ground to move. Arrow keys or WASD also move."></canvas><div class="floor-card"><span id="floor-number" class="eyebrow">THE FIRST DESCENT</span><h2 id="floor-name">Mosslit Steps</h2></div><button id="map-button" class="map-button" aria-label="Open dungeon map"><canvas id="mini-map" width="93" height="93"></canvas><span>MAP</span></button><div id="boss-bar" class="boss-bar" hidden></div><div id="statuses" class="statuses"></div><div id="board-hint" class="board-hint">Tap a tile to move. The world waits for you.</div><button id="context-action" class="context-action" hidden></button><div id="floor-toast" class="floor-toast" hidden></div></div><div id="enemy-strip" class="enemy-strip" hidden></div><div id="recent-log" class="recent-log" aria-live="polite" aria-atomic="true"></div><div class="action-dock"><div class="quick-items"><button id="quick-heal" class="quick-slot" aria-label="Use Crimson tonic"><span class="sprite s10"></span><span id="heal-count" class="slot-count">3</span><small>HEAL</small></button><button id="quick-scroll" class="quick-slot" aria-label="Open scrolls"><span class="sprite s11"></span><span id="scroll-count" class="slot-count">1</span><small>SCROLL</small></button><button id="inventory" class="quick-slot bag-slot" aria-label="Open inventory"><span id="bag-icon"></span><small>PACK</small></button></div><div class="main-actions"><button id="explore" class="action-button"><span id="explore-icon"></span><span>Explore</span></button><button id="wait" class="action-button wait-button"><span id="wait-icon"></span><span>Wait</span><kbd>SPACE</kbd></button></div></div><div class="turn-footer"><span id="turn-text">TURN 0</span><span id="save-status">Saved on this device</span><button id="journal-button">Journal ↗</button></div></div><aside class="side-panel"><div class="side-heading"><span class="eyebrow">YOUR JOURNEY</span><span>✦</span></div><h3>Carry the dawn.</h3><p class="side-lore" id="floor-lore"></p><div class="floor-progress" id="floor-progress"></div><div class="side-equipment" id="side-equipment"></div><div class="side-heading journal-heading"><span class="eyebrow">FIELD NOTES</span><button id="bestiary-button">Bestiary ↗</button></div><div id="side-log" class="side-log"></div><div class="side-tip"><span>✧</span><p id="tactical-tip">Red tiles show where an attack will land next turn. A step aside can save your life.</p></div></aside></div>
+    </section>
+    <dialog id="modal" aria-labelledby="modal-title"><div class="modal-header"><span id="modal-kicker" class="eyebrow"></span><button id="close-modal" class="icon-button" aria-label="Close panel">✕</button></div><h2 id="modal-title"></h2><div id="modal-content"></div></dialog>
+    <div id="toast" class="toast" role="status" hidden></div>
+  </main>
+  <script type="module" src="./game/app.js"></script>
+</body>
+</html>
