@@ -12,7 +12,7 @@ The existing Sites project identity is in `.openai/hosting.json`. Reuse it; do n
 
 ## GitHub and hosting
 
-The user created `peteroomen/lanternfall` as a public repository, and the connected GitHub app has write access. The game source, PNG artwork, tests, CI workflow and Vercel configuration belong in that repository. Repository URL: https://github.com/peteroomen/lanternfall
+The user created `peteroomen/lanternfall` as a public repository, and the connected GitHub app has write access. The game source, PNG/WebP artwork, tests, CI workflow and Vercel configuration belong in that repository. Repository URL: https://github.com/peteroomen/lanternfall
 
 The playable private publication is https://lanternfall.petertheoomen.chatgpt.site. The local `origin` remote is the separate Sites source repository. The `github` remote identifies the user's personal repository; the connector can publish commits and binary blobs there without local GitHub CLI authentication. Do not modify black-tide.
 
