@@ -4,6 +4,8 @@ A four-floor, turn-based fantasy roguelike for phones and desktop browsers. Carr
 
 ## Play
 
+[Play Lanternfall](https://lanternfall-eta.vercel.app/)
+
 - Tap or click explored ground to move. Tap an adjacent enemy to attack.
 - Wait advances one turn. Nothing happens while you think or browse your pack.
 - Red tiles warn where an attack will land. Dodge, then attack during the enemy's recovery.
@@ -42,7 +44,7 @@ The development server defaults to port 4173. Open its localhost URL in a browse
 
 ## Deploy on Vercel
 
-A production deployment was created on 2026-09-06: [production URL](https://lanternfall-peter-oomens-projects.vercel.app) · [build inspector](https://vercel.com/peter-oomens-projects/lanternfall/wvusGJQLd6DKSSHUyaKCwNhgrMU3). Final readiness is awaiting verification because the connected Vercel app lacks read access to the project's team. The uploaded source is commit `7df16c44e6481658fcb7c88112f32a236a528784`, whose GitHub checks passed.
+The production deployment is live and verified on 2026-09-06: [play](https://lanternfall-eta.vercel.app/) · [build inspector](https://vercel.com/peter-oomens-projects/lanternfall/wvusGJQLd6DKSSHUyaKCwNhgrMU3). Vercel reports `READY`, and the public page loads without a Vercel login. The uploaded source is commit `7df16c44e6481658fcb7c88112f32a236a528784`, whose GitHub checks passed.
 
 This first release was uploaded directly. Automatic deployment on GitHub pushes requires connecting `peteroomen/lanternfall` to the existing Vercel project. Use **Other** as the framework. The included `vercel.json` sets `npm run build` and the `dist` output directory. There are no runtime services, environment variables, database migrations or server functions to provision. Deploy from the repository root.
 
@@ -75,6 +77,8 @@ The final 100-run batch on seeds 0–49 produced:
 | Careful: equipment, supplies, dodging | 50 | 0 | 0 | 627 |
 | Reckless: ignores equipment, supplies and warnings | 26 | 24 | 0 | 553 |
 
-These are deterministic automated-player results, not estimates of human difficulty. Browser rendering, physical touch interaction, screen-reader behavior, audio and installation have **not** yet been verified on a real phone or Mac. The offline tests exercise the service-worker code in a JavaScript harness, rather than an actual browser cache.
+These are deterministic automated-player results, not estimates of human difficulty. A production Chrome browser smoke check on 2026-09-06 verified title/dungeon artwork, starting a run, Wait, keyboard movement, the backpack, click-to-move and save/resume after reload. No game-origin console errors appeared during that check.
+
+Physical phone/Mac testing, touch interaction, screen-reader behavior, audio, installation and a complete browser playthrough remain unverified. The offline tests exercise the service-worker code in a JavaScript harness, rather than an actual browser cache.
 
 There is no account, multiplayer, cloud save, shop or permanent progression between runs. Gold is a run score. Additional floors, classes and content can build on the existing engine.
