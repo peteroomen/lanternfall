@@ -16,7 +16,16 @@ The user created `peteroomen/lanternfall` as a public repository, and the connec
 
 The playable private publication is https://lanternfall.petertheoomen.chatgpt.site. The local `origin` remote is the separate Sites source repository. The `github` remote identifies the user's personal repository; the connector can publish commits and binary blobs there without local GitHub CLI authentication. Do not modify black-tide.
 
-Vercel configuration is committed and ready for importing the repository. No Vercel publication has been performed through this session's tools.
+The user explicitly approved deploying `main` as a public Vercel website. On 2026-09-06, the connected Vercel app created production deployment `dpl_wvusGJQLd6DKSSHUyaKCwNhgrMU3` from GitHub commit `7df16c44e6481658fcb7c88112f32a236a528784` (tree `746b8931193dd0a9f70ede9d635260d9361cee01`). All 28 source files were uploaded directly; automatic GitHub deployments are not linked.
+
+- Production alias: https://lanternfall-peter-oomens-projects.vercel.app
+- Immutable deployment: https://lanternfall-2e9k7iv12-peter-oomens-projects.vercel.app
+- Build inspector: https://vercel.com/peter-oomens-projects/lanternfall/wvusGJQLd6DKSSHUyaKCwNhgrMU3
+- Team: `peter-oomens-projects`, ID `team_ekatETkUxbs77AUhHpmffXEP`.
+- Last observed Vercel status: `INITIALIZING`. Final build readiness and public loading remain unverified. The connected app returns HTTP 403 when inspecting this team and lists no accessible teams. Public fetch checks also failed in this environment. Reauthorize the Vercel connection for this team to inspect the existing deployment; do not create a duplicate simply to check status.
+- Release CI passed: https://github.com/peteroomen/lanternfall/actions/runs/34006489521
+
+The uploader enforces a 3 MiB per-file and 4 MiB total encoded-data limit. The title is full-resolution near-lossless WebP (quality 99), with a measured maximum color-channel difference of 1/255 from the original; original PNG artwork remains in Git history. The 28-file payload fits at approximately 3.99 MiB encoded.
 
 ## Validation and follow-up
 

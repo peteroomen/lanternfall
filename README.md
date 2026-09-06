@@ -42,7 +42,9 @@ The development server defaults to port 4173. Open its localhost URL in a browse
 
 ## Deploy on Vercel
 
-Import the repository as an **Other** framework project. The included `vercel.json` sets `npm run build` and the `dist` output directory. There are no runtime services, environment variables, database migrations or server functions to provision. Deploy from the repository root.
+A production deployment was created on 2026-09-06: [production URL](https://lanternfall-peter-oomens-projects.vercel.app) · [build inspector](https://vercel.com/peter-oomens-projects/lanternfall/wvusGJQLd6DKSSHUyaKCwNhgrMU3). Final readiness is awaiting verification because the connected Vercel app lacks read access to the project's team. The uploaded source is commit `7df16c44e6481658fcb7c88112f32a236a528784`, whose GitHub checks passed.
+
+This first release was uploaded directly. Automatic deployment on GitHub pushes requires connecting `peteroomen/lanternfall` to the existing Vercel project. Use **Other** as the framework. The included `vercel.json` sets `npm run build` and the `dist` output directory. There are no runtime services, environment variables, database migrations or server functions to provision. Deploy from the repository root.
 
 The `dist` directory is the authored application source and must remain tracked. It is not disposable generated output. `.openai/hosting.json` retains the identity of its private Sites publication; Vercel does not use it.
 
